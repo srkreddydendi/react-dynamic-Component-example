@@ -16,7 +16,7 @@ class App extends Component {
         C = B;
         break;
       default:
-        C = A;
+        C = A; 
     }
 
     return (
