@@ -30,8 +30,11 @@ let y =React.createElement('h1', {}, x);
     
         return (
           <>
-          <div dangerouslySetInnerHTML={{__html: arr[index] }} ></div>
-        <span key={index} ><C {...item} /></span>
+          <div dangerouslySetInnerHTML={{__html: arr[index] }} >
+          
+          </div>
+          <span key={index} ><C {...item} /></span>
+        
         </>
         );
     
