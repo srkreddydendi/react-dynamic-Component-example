@@ -6,7 +6,9 @@ import A from "./shared/A";
 import B from "./shared/B";
 
 class App extends Component {
+
   render() {
+      let arr = ['<h2>abcd</h2>', '<h4>abcd</h4>'];
     let items = [{ title: "hello", name:"shivaram" }, { title: "hello",name:"arun" }];
     let C = null;
     switch (2) {
@@ -28,9 +30,7 @@ let y =React.createElement('h1', {}, x);
     
         return (
           <>
-          {y}
-          <div dangerouslySetInnerHTML={{__html: x}}></div>
-        <span key={index} ><C title={item.title} name={item.name} /></span>
+          <div dangerouslySetInnerHTML={{__html: arr[index] }} ></div>
         <span key={index} ><C {...item} /></span>
         </>
         );
