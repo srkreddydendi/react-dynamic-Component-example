@@ -8,7 +8,6 @@ import B from "./shared/B";
 class App extends Component {
 
   render() {
-      let arr = ['<h2>abcd</h2>', '<h4>abcd</h4>'];
     let items = [{ title: "hello", name:"shivaram" }, { title: "hello",name:"arun" }];
     let C = null;
     switch (2) {
@@ -22,6 +21,8 @@ class App extends Component {
         C = A; 
     }
 let x = `<h3>hello ${C}</h3>`;
+  let arr = [`<h2>abcd</h2> ${C}`, '<h4>abcd</h4>'];
+    
 let y =React.createElement('h1', {}, x);
 
     return (
