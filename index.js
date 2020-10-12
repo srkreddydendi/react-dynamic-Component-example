@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import ReactDOMServer from 'react-dom/server';
 //import Savings from "./Savings";
 //import "./styles/style.scss";
 import A from "./shared/A";
@@ -20,6 +21,9 @@ class App extends Component {
       default:
         C = A; 
     }
+    let element = '<B title="title" name="name"></B>'
+    let output = ReactDOMServer.renderToStaticMarkup(element)
+
 let x = `<h3>hello ${C}</h3>`;
   let arr = [`<h2>abcd</h2> ${C}`, '<h4>abcd</h4>'];
     
@@ -31,10 +35,11 @@ let y =React.createElement('h1', {}, x);
     
         return (
           <>
-          <div dangerouslySetInnerHTML={{__html: arr[index] }} >
+          {element}
+          <div dangerouslySetInnerHTML={{__html: element }} >
           
           </div>
-          <span key={index} ><C {...item} /></span>
+          
         
         </>
         );
