@@ -21,7 +21,7 @@ class App extends Component {
       default:
         C = A; 
     }
-    let element = '<B title="title" name="name"></B>'
+    let element = '<a href="title" >click</B>'
     let output = ReactDOMServer.renderToStaticMarkup(element)
 
 let x = `<h3>hello ${C}</h3>`;
@@ -35,7 +35,7 @@ let y =React.createElement('h1', {}, x);
     
         return (
           <>
-          {element}
+          
           <div dangerouslySetInnerHTML={{__html: element }} >
           
           </div>
